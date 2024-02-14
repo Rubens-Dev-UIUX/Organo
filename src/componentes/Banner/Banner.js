@@ -5,7 +5,7 @@ export const Banner = () => {
     return (
         // as classes para serem estilizadas em React, precisam ser declaradas como "className"
         <header className='banner'>
-        <img src="/imagens/banner-antimation.gif" alt="Banner Principal" />
+        <img src="/imagens/Banner-antimation.gif" alt="Banner Principal" />
         </header>
         
     )
