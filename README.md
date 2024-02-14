@@ -1,3 +1,11 @@
+## Introdução
+
+Este projeto tem como objetivo reciclar meus conhecimentos em React JS. Além de ser um projeto divertido e muito útil para organizações simples e temporárias.
+
+## Caso queira testar em produção
+
+Acesse e seja feliz: [Deploy]().
+
 ## Para iniciar o projeto
 
 #### `npm start`
@@ -32,11 +40,8 @@ Você também pode ver erros de lint no console.
 
 ## Organo Figma - Telas
 
-<div>
 
-<a href="https://www.figma.com/file/HN2XMXMgFRjL0b1uUewb7u/Projeto-Organo?type=design&node-id=134%3A128&mode=design&t=8RTIvPBd6eUmy4q1-1"></a>
-
-</div>
+Visite o protótipo no Figma: [Figma](https://www.figma.com/file/HN2XMXMgFRjL0b1uUewb7u/Projeto-Organo?type=design&node-id=134%3A128&mode=design&t=8RTIvPBd6eUmy4q1-1)
 
 &nbsp;
 &nbsp;
