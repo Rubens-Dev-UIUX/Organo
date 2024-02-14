@@ -2,9 +2,13 @@
 
 Este projeto tem como objetivo reciclar meus conhecimentos em React JS. Além de ser um projeto divertido e muito útil para organizações simples e temporárias.
 
+#### Objeções
+1. Site não está 100% responsivo
+2. Para melhor visualização, reduzir zoom da página web
+
 ## Caso queira testar em produção
 
-Acesse e seja feliz: [Deploy](organo-213yzx7z4-rubens-projects-on.vercel.app)
+Acesse e seja feliz: [Deploy](https://organo-self-two.vercel.app/)
 
 ## Para iniciar o projeto
 
