@@ -13,16 +13,30 @@ Você também pode ver erros de lint no console.
 
 ## Adaptando sua organização
 
-#### Para alterar a lista de times
+### Para alterar a lista de times acesse:
+#### ./src/app.js -> const time
 
 &nbsp;
 
-#### Para alterar as cores dos times
+### Para alterar as cores dos times acesse:
+#### ./src/app.js -> const time
 
 &nbsp;
 
-#### Para alterar a sugestão dentro dos inputs
+### Para alterar a sugestão dentro dos inputs acesse:
+#### ./src/Formulario/Formulario.js -> < /Form > -> < /Campotexto >
 
+
+&nbsp;
+&nbsp;
+
+## Organo Figma - Telas
+
+<div>
+
+<a href="https://www.figma.com/file/HN2XMXMgFRjL0b1uUewb7u/Projeto-Organo?type=design&node-id=134%3A128&mode=design&t=8RTIvPBd6eUmy4q1-1"></a>
+
+</div>
 
 &nbsp;
 &nbsp;

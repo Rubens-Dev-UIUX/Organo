@@ -2,20 +2,24 @@ import { useState } from 'react';
 import Banner from './componentes/Banner';
 import Formulario from './componentes/Formulario';
 import Time from './componentes/Time';
+import Footer from './componentes/Footer/Index';
 
 
 function App() {
 
+    // Altere os times aqui ⬇️
+    // Altere as cores aqui ⬇️
+
   const times = [
     {
       nome: 'Limpeza e Organização',
-      corPrimaria: '#4F006A#4F006A',
-      corSecundaria: '#C9AEDA', 
+      corPrimaria: '#686A00',
+      corSecundaria: '#D6DAAE', 
     },
     {
       nome:'Compras e Feira',
-      corPrimaria: '#4F006A',
-      corSecundaria: '#C9AEDA', 
+      corPrimaria: '#00446A',
+      corSecundaria: '#AEDAD7', 
     },
     {
       nome:'Wild Rift (LOL)',
@@ -24,13 +28,13 @@ function App() {
     },
     {
       nome:'Bagunça',
-      corPrimaria: '#4F006A',
-      corSecundaria: '#C9AEDA', 
+      corPrimaria: '#6A0000',
+      corSecundaria: '#DAAEAE', 
     },
     {
       nome:'Maratona de Series/Filmes',
-      corPrimaria: '#4F006A',
-      corSecundaria: '#C9AEDA', 
+      corPrimaria: '#006A51',
+      corSecundaria: '#AFDAAE', 
     }
   ]
 
@@ -53,6 +57,8 @@ function App() {
       corSecundaria={time.corSecundaria} 
       membros={membros.filter(membro => membro.time === time.nome)}
       />)}
+
+      <Footer/>
 
     </div>
   );

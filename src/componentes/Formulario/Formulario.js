@@ -30,9 +30,12 @@ export const Formulario = (props) => {
     }
 
     return (
+        <>
         <section className='formulario'>
             <form onSubmit={aoSalvar}>
             <h2>Preencha os dados para criar um card de membro </h2>
+
+            {/* Altere as sugestões aqui ⬇️ ( Dentro de "placeholder" ) */}
 
             <CampoTexto 
             obrigatorio={true} label="Nome" placeholder="Seu nome" valor={nome} aoAlterar={valor => setNome(valor)}
@@ -53,6 +56,12 @@ export const Formulario = (props) => {
             <Botao> Criar Card </Botao>
             </form>
         </section>
+
+        <div className='titulo'>
+        <h1>Minha Organização</h1>
+        </div>
+
+        </>
     )
 
 }

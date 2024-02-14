@@ -11,3 +11,15 @@
     padding: 36px 64px;
     box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.08);
 }
+
+.titulo{
+    text-align: center;
+    padding-bottom: 64px;
+}
+
+.titulo h1 {
+    font-weight: bold;
+    border-bottom: 4px solid;
+    padding-bottom: 12px;
+    display: inline-block;
+}
