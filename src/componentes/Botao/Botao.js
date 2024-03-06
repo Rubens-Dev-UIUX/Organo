@@ -1,8 +1,8 @@
 import './Botao.css'
 
-export const Botao = (props) => {
+export const Botao = ({texto}) => {
 
     return (
-        <button className='botao'>{props.children}</button>
+        <button className='botao'>{texto}</button>
     )
 }

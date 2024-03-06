@@ -22,17 +22,12 @@ export const Formulario = (props) => {
             time
         })
 
-        setNome('')
-        setStatus('')
-        setImagem('')
-        setTime('')
-        
     }
 
     return (
         <>
-        <section className='formulario'>
-            <form onSubmit={aoSalvar}>
+        <section className='formulario-container'>
+            <form className='formulario' onSubmit={aoSalvar}>
             <h2>Preencha os dados para criar um card de membro </h2>
 
             {/* Altere as sugestões aqui ⬇️ ( Dentro de "placeholder" ) */}

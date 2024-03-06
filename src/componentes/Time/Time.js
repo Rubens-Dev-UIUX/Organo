@@ -1,18 +1,20 @@
 import Membro from '../Membro'
 import './Time.css'
 
-export const Time = (props) => {
-
-    const corPrimaria = { borderColor: props.corPrimaria}
-    const corSecundaria = { backgroundColor: props.corSecundaria}
+export const Time = ({ time, membros, aoDeletar} ) => {
 
     return (
-        (props.membros.length > 0) && 
-        <section className='time' style={corSecundaria}>
-            <h3 style={corPrimaria}>{props.nome}</h3>
+
+        membros.length > 0 && 
+        <section className='time' style={{background: time.corSecundaria}}>
+            <h3 style={{ borderColor: time.corPrimaria }}>{time.nome}</h3>
 
             <div className='membros'>
-            {props.membros.map( membro => <Membro key={membro.nome} corDeFundo={props.corPrimaria} nome={membro.nome} status={membro.status} imagem={membro.imagem} />)}
+            {membros.map((membro, indice)=> {
+                
+                
+                return <Membro key={indice} membro={membro} corDeFundo={time.corPrimaria} aoDeletar={aoDeletar}/>;
+            })}
             </div>
         
         </section>

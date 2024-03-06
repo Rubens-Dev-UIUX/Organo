@@ -38,23 +38,80 @@ function App() {
     }
   ]
 
-  const [membros, setMembros] = useState([])
+  const inicial = [
+    {
+      nome: 'Rubens',
+      status: 'Meditando',
+      imagem: 'https://avatars.githubusercontent.com/u/53584262?v=4',
+      time: times[0].nome
+    },
+    {
+      nome: 'Mauricio',
+      status: 'De ferias',
+      imagem: 'https://avatars.githubusercontent.com/u/70400071?v=4',
+      time: times[0].nome
+    },
+    {
+      nome: 'Rubens',
+      status: 'Meditando',
+      imagem: 'https://avatars.githubusercontent.com/u/53584262?v=4',
+      time: times[1].nome
+    },
+    {
+      nome: 'Mauricio',
+      status: 'De ferias',
+      imagem: 'https://avatars.githubusercontent.com/u/70400071?v=4',
+      time: times[1].nome
+    },
+    {
+      nome: 'Rubens',
+      status: 'Meditando',
+      imagem: 'https://avatars.githubusercontent.com/u/53584262?v=4',
+      time: times[2].nome
+    },
+    {
+      nome: 'Mauricio',
+      status: 'De ferias',
+      imagem: 'https://avatars.githubusercontent.com/u/70400071?v=4',
+      time: times[2].nome
+    },
+    {
+      nome: 'Rubens',
+      status: 'Meditando',
+      imagem: 'https://avatars.githubusercontent.com/u/53584262?v=4',
+      time: times[3].nome
+    },
+    {
+      nome: 'Mauricio',
+      status: 'De ferias',
+      imagem: 'https://avatars.githubusercontent.com/u/70400071?v=4',
+      time: times[3].nome
+    },
+    {
+      nome: 'Rubens',
+      status: 'Meditando',
+      imagem: 'https://avatars.githubusercontent.com/u/53584262?v=4',
+      time: times[4].nome
+    },
+    {
+      nome: 'Mauricio',
+      status: 'De ferias',
+      imagem: 'https://avatars.githubusercontent.com/u/70400071?v=4',
+      time: times[4].nome
+    },
 
-  const aoNovoMembro = (membro) => {
-    // console.log(membro)
-    setMembros([...membros, membro])
-}
+  ]
+
+  const [membros, setMembros] = useState(inicial)
 
   return (
     <div className="App">
       <Banner />
-      <Formulario times={times.map(time => time.nome)} aoCadastrarMembro={membro => aoNovoMembro(membro)} />
+      <Formulario times={times.map(time => time.nome)} aoCadastrarMembro={membro => setMembros([...membros, membro])} />
 
-      {times.map(time => <Time 
-      key={time.nome} 
-      nome={time.nome} 
-      corPrimaria={time.corPrimaria} 
-      corSecundaria={time.corSecundaria} 
+      {times.map((time, indice ) => <Time 
+      key={indice} 
+      time={time}
       membros={membros.filter(membro => membro.time === time.nome)}
       />)}
 

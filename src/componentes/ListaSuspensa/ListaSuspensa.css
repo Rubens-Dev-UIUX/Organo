@@ -1,3 +1,7 @@
+.lista-suspensa {
+    margin: 24px 0;
+}
+
 .lista-suspensa label {
     display: block;
     margin-bottom: 8px;
@@ -12,4 +16,5 @@
     font-size: 24px;
     padding: 24px;
     box-sizing: border-box;
+    border-radius: 0px;
 }
