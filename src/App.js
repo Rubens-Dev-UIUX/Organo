@@ -10,7 +10,7 @@ function App() {
     // Altere os times aqui ⬇️
     // Altere as cores aqui ⬇️
 
-  const times = [
+  const [ times, setTimes ] = useState([
     {
       nome: 'Limpeza e Organização',
       corPrimaria: '#686A00',
@@ -36,7 +36,7 @@ function App() {
       corPrimaria: '#006A51',
       corSecundaria: '#AFDAAE', 
     }
-  ]
+  ])
 
   const inicial = [
     {
@@ -104,15 +104,31 @@ function App() {
 
   const [membros, setMembros] = useState(inicial)
 
+  function deletarMembro() {
+    console.log('Deletando Membro')
+  }
+
+  function mudarCorTime( cor, nome ) {
+    setTimes(times.map(time => {
+      if(time.nome === nome ) {
+        time.corPrimaria = cor;
+      }
+      return time;
+    }));
+  }
+
   return (
     <div className="App">
       <Banner />
       <Formulario times={times.map(time => time.nome)} aoCadastrarMembro={membro => setMembros([...membros, membro])} />
 
-      {times.map((time, indice ) => <Time 
+      {times.map((time, indice ) => 
+      <Time
+      mudarCor={mudarCorTime}
       key={indice} 
       time={time}
       membros={membros.filter(membro => membro.time === time.nome)}
+      aoDeletar={deletarMembro}
       />)}
 
       <Footer/>
