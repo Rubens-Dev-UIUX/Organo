@@ -3,6 +3,8 @@ import Banner from './componentes/Banner';
 import Formulario from './componentes/Formulario';
 import Time from './componentes/Time';
 import Footer from './componentes/Footer/Index';
+import { v4 as uuidv4 } from 'uuid';
+import Membro from './componentes/Membro';
 
 
 function App() {
@@ -12,88 +14,98 @@ function App() {
 
   const [ times, setTimes ] = useState([
     {
+      id: uuidv4(),
       nome: 'Limpeza e Organização',
-      corPrimaria: '#686A00',
-      corSecundaria: '#D6DAAE', 
+      cor: '#686A00'
     },
     {
+      id: uuidv4(),
       nome:'Compras e Feira',
-      corPrimaria: '#00446A',
-      corSecundaria: '#AEDAD7', 
+      cor: '#00446A'
     },
     {
+      id: uuidv4(),
       nome:'Wild Rift (LOL)',
-      corPrimaria: '#4F006A',
-      corSecundaria: '#C9AEDA', 
+      cor: '#4F006A'
     },
     {
+      id: uuidv4(),
       nome:'Bagunça',
-      corPrimaria: '#6A0000',
-      corSecundaria: '#DAAEAE', 
+      cor: '#6A0000'
     },
     {
+      id: uuidv4(),
       nome:'Maratona de Series/Filmes',
-      corPrimaria: '#006A51',
-      corSecundaria: '#AFDAAE', 
+      cor: '#006A51'
     }
   ])
 
   const inicial = [
     {
+      id: uuidv4(),
       nome: 'Rubens',
       status: 'Meditando',
       imagem: 'https://avatars.githubusercontent.com/u/53584262?v=4',
       time: times[0].nome
     },
     {
+      id: uuidv4(),
       nome: 'Mauricio',
       status: 'De ferias',
       imagem: 'https://avatars.githubusercontent.com/u/70400071?v=4',
       time: times[0].nome
     },
     {
+      id: uuidv4(),
       nome: 'Rubens',
       status: 'Meditando',
       imagem: 'https://avatars.githubusercontent.com/u/53584262?v=4',
       time: times[1].nome
     },
     {
+      id: uuidv4(),
       nome: 'Mauricio',
       status: 'De ferias',
       imagem: 'https://avatars.githubusercontent.com/u/70400071?v=4',
       time: times[1].nome
     },
     {
+      id: uuidv4(),
       nome: 'Rubens',
       status: 'Meditando',
       imagem: 'https://avatars.githubusercontent.com/u/53584262?v=4',
       time: times[2].nome
     },
     {
+      id: uuidv4(),
       nome: 'Mauricio',
       status: 'De ferias',
       imagem: 'https://avatars.githubusercontent.com/u/70400071?v=4',
       time: times[2].nome
     },
     {
+      id: uuidv4(),
       nome: 'Rubens',
       status: 'Meditando',
       imagem: 'https://avatars.githubusercontent.com/u/53584262?v=4',
       time: times[3].nome
     },
     {
+      id: uuidv4(),
       nome: 'Mauricio',
       status: 'De ferias',
       imagem: 'https://avatars.githubusercontent.com/u/70400071?v=4',
       time: times[3].nome
     },
     {
+      id: uuidv4(),
       nome: 'Rubens',
       status: 'Meditando',
       imagem: 'https://avatars.githubusercontent.com/u/53584262?v=4',
       time: times[4].nome
     },
     {
+      id: uuidv4(), 
       nome: 'Mauricio',
       status: 'De ferias',
       imagem: 'https://avatars.githubusercontent.com/u/70400071?v=4',
@@ -104,14 +116,14 @@ function App() {
 
   const [membros, setMembros] = useState(inicial)
 
-  function deletarMembro() {
-    console.log('Deletando Membro')
+  function deletarMembro(id) {
+    setMembros(membros.filter( membro => membro.id != id)); 
   }
 
-  function mudarCorTime( cor, nome ) {
+  function mudarCorTime( cor, id ) {
     setTimes(times.map(time => {
-      if(time.nome === nome ) {
-        time.corPrimaria = cor;
+      if(time.id === id ) {
+        time.cor = cor;
       }
       return time;
     }));

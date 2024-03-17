@@ -5,7 +5,11 @@ export const Membro = ( { membro, corDeFundo, aoDeletar } ) => {
 
     return (
         <div className='membro'>
-            <AiFillCloseCircle size={30} className='deletar' onClick={aoDeletar} />
+            <AiFillCloseCircle 
+                size={30} 
+                className='deletar' 
+                onClick={() => aoDeletar(membro.id)}
+            />
             <div className='cabecalho' style={{ backgroundColor: corDeFundo }}>
                 <img src={membro.imagem} alt={membro.nome} />
             </div>
